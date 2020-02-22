@@ -11,3 +11,17 @@
   font-weight: 700;
   src: url(assets/Lato-Bold.ttf) format('ttf');
 }
+
+@font-face {
+  font-family: 'Lato Black';
+  font-style: normal;
+  font-weight: 900;
+  src: url(assets/Lato-Black.ttf) format('ttf');
+}
+
+@font-face {
+  font-family: 'Lato Light';
+  font-style: normal;
+  font-weight: 300;
+  src: url(assets/Lato-Light.ttf) format('ttf');
+}
