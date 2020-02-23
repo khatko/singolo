@@ -5,12 +5,13 @@ body {
 ul {
   margin: 0;
   padding: 0;
+
   list-style: none;
 }
 
 .wrapper {
-  margin: 0 auto;
   width: 1020px;
+  margin: 0 auto;
 }
 
 /* header */
@@ -20,6 +21,7 @@ header {
   padding: 40px 12px 28px 40px;
   grid-template-areas: "logo nav";
   grid-template-columns: 568px 448px;
+
   background-color: #2d303a;
   border-bottom: 7.4px solid #323746;
 }
@@ -27,11 +29,12 @@ header {
 /* logo */
 
 header h1 {
-  margin: 0;
   grid-area: logo;
+  margin: 0;
+
   font-family: "Lato Bold", "Arial", sans-serif;
-  color: #ffffff;
   font-size: 25px;
+  color: #ffffff;
   text-transform: uppercase;
   text-align: left;
   line-height: 13px;
@@ -62,54 +65,58 @@ header h1 {
 }
 
 .main-nav li {
-  margin-right: -4px;
   display: inline-block;
-  text-transform: uppercase;
+  margin-right: -4px;
+
   font-family: "Lato Bold", "Arial", sans-serif;
   font-size: 12px;
+  text-transform: uppercase;
   line-height: 6px;
 }
 
 .main-nav li:first-child {
-  letter-spacing: 0px;
+  letter-spacing: 0;
 }
 
 .main-nav li:not(:last-child)::after {
-  padding: 3px 13px 10px 13px;
   display: inline-block;
-  vertical-align: middle;
+  padding: 3px 13px 10px 13px;
   content: ".";
-  color: #494e62;
+
   font-size: 12px;
+  vertical-align: middle;
+  color: #494e62;
 }
 
 /* slider */
 
 .slider {
   position: relative;
+
   height: 448px;
   padding: 80px 40px 65px 40px;
+
   background-color: #f06c64;
   border-bottom: 7.5px solid #ea676b;
 }
 
 .slider .arrow {
-  cursor: pointer;
+  position: absolute;
+  top: 281px;
+  z-index: 10;
+
   display: block;
   height: 27px;
   width: 16px;
-  position: absolute;
-  background: url(assets/arrow.png) 0 0 no-repeat;
-  z-index: 10;
-  top: 281px;
+
+  background: url("assets/images/arrow.png") 0 0 no-repeat;
+
+  cursor: pointer;
 }
 
 .slider .arrow.prev {
   left: 42px;
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
+
   transform: rotate(180deg);
 }
 
@@ -125,9 +132,10 @@ header h1 {
 
 .phone-wrapper .phone {
   position: absolute;
+  z-index: 5;
+
   height: 458px;
   width: 214.7px;
-  z-index: 5;
 }
 
 .phone-wrapper .shadow {
@@ -137,8 +145,9 @@ header h1 {
 
 .phone-wrapper .screen {
   position: absolute;
-  border: 3px solid #c7c8c7;
   z-index: 10;
+
+  border: 3px solid #c7c8c7;
 }
 
 .phone-wrapper.vertical .phone {
@@ -154,42 +163,42 @@ header h1 {
 .phone-wrapper.vertical .screen {
   top: 35px;
   left: 83px;
+
   height: 333px;
   width: 188px;
-  background: url(assets/screen-vertical.png);
+
+  background: url("assets/images/screen-vertical.png");
   background-position: -14px 445px;
 }
 
 .phone-wrapper.horizonal .phone {
   top: -27.5px;
   left: 506.3px;
+
   height: 458.3px;
   width: 215px;
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
+
   transform: rotate(90deg);
 }
 
 .phone-wrapper.horizonal .shadow {
   top: -27.5px;
   left: 506.4px;
+
   height: 458.2px;
   width: 215.3px;
-  -webkit-transform: rotate(90deg) scaleX(-1);
-  -moz-transform: rotate(90deg) scaleX(-1);
-  -ms-transform: rotate(90deg) scaleX(-1);
-  -o-transform: rotate(90deg) scaleX(-1);
+
   transform: rotate(90deg) scaleX(-1);
 }
 
 .phone-wrapper.horizonal .screen {
   top: 105px;
   left: 442px;
+
   height: 188px;
   width: 333px;
-  background: url(assets/screen-horizontal.png);
+
+  background: url("assets/images/screen-horizontal.png");
   background-position: -125px -119px;
 }
 
@@ -197,25 +206,28 @@ header h1 {
 
 .services {
   padding: 70.3px 40px 28px 40px;
+
   background-color: #f2f2f2;
   border-bottom: 6px solid #ffffff;
 }
 
 .services h3 {
   margin: 0;
+
+  font-family: "Lato Black", "Arial", sans-serif;
   font-size: 30px;
   line-height: 18px;
   color: #666d89;
-  font-family: "Lato Black", "Arial", sans-serif;
 }
 
 .services article p {
   margin: 0;
-  padding: 26px 0px 44.5px 0px;
+  padding: 26px 0 44.5px 0;
+
+  font-family: "Lato Light", "Arial", sans-serif;
   font-size: 18px;
   line-height: 30px;
   color: #767e9e;
-  font-family: "Lato Light", "Arial", sans-serif;
   letter-spacing: -0.25px;
   word-spacing: -2px;
   text-align: justify;
@@ -229,6 +241,7 @@ header h1 {
 
 .services-wrapper h5 {
   margin: 0;
+
   font-family: "Lato Black", "Arial", sans-serif;
   font-size: 18px;
   line-height: 18px;
@@ -237,8 +250,8 @@ header h1 {
 }
 
 .service {
-  overflow: hidden;
   padding-right: 20px;
+  overflow: hidden;
 }
 
 .service .logo {
@@ -254,43 +267,44 @@ header h1 {
 
 .service .description p {
   margin: 0;
-  padding: 10px 0px;
+  padding: 10px 0;
+
   font-family: "Lato", "Arial", sans-serif;
   font-size: 12px;
   line-height: 21.5px;
   color: #767e9e;
-  word-spacing: 0px;
+  word-spacing: 0;
   word-break: break-word;
   text-align: justify;
 }
 
 .logo.pen {
-  background: url(assets/icons/pen.svg) 1px 0 no-repeat;
+  background: url("assets/images/icons/pen.svg") 1px 0 no-repeat;
   background-size: 60px 60px;
 }
 
 .logo.phone {
-  background: url(assets/icons/phone.svg) 1px 0 no-repeat;
+  background: url("assets/images/icons/phone.svg") 1px 0 no-repeat;
   background-size: 60px 60px;
 }
 
 .logo.bulb {
-  background: url(assets/icons/bulb.svg) 0 0 no-repeat;
+  background: url("assets/images/icons/bulb.svg") 0 0 no-repeat;
   background-size: 60px 59.4px;
 }
 
 .logo.bubble {
-  background: url(assets/icons/bubble.svg) 0 0 no-repeat;
+  background: url("assets/images/icons/bubble.svg") 0 0 no-repeat;
   background-size: 60px 59.4px;
 }
 
 .logo.heart {
-  background: url(assets/icons/heart.svg) 0 0 no-repeat;
+  background: url("assets/images/icons/heart.svg") 0 0 no-repeat;
   background-size: 60px 60px;
 }
 
 .logo.star {
-  background: url(assets/icons/star.svg) 0 0 no-repeat;
+  background: url("assets/images/icons/star.svg") 0 0 no-repeat;
   background-size: 60px 60px;
 }
 
@@ -299,9 +313,9 @@ header h1 {
 }
 
 .word-spacing-0 {
-  word-spacing: 0px !important;
+  word-spacing: 0 !important;
 }
 
-.service .bubble + .description h5{
+.service .bubble + .description h5 {
   word-spacing: -1.4px;
 }
