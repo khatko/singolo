@@ -9,7 +9,7 @@ ul {
 }
 
 .wrapper {
-  /*margin: 0 auto;*/
+  margin: 0 auto;
   width: 1020px;
 }
 
@@ -17,11 +17,11 @@ ul {
 
 header {
   display: grid;
-  padding: 40px 12px 30px 37px;
+  padding: 40px 12px 28px 40px;
   grid-template-areas: "logo nav";
-  grid-template-columns: 572px 448px;
+  grid-template-columns: 568px 448px;
   background-color: #2d303a;
-  border-bottom: 7px solid #323746;
+  border-bottom: 7.4px solid #323746;
 }
 
 /* logo */
@@ -31,12 +31,11 @@ header h1 {
   grid-area: logo;
   font-family: "Lato Bold", "Arial", sans-serif;
   color: #ffffff;
-  font-weight: normal;
   font-size: 25px;
   text-transform: uppercase;
   text-align: left;
-  line-height: 10px;
-  letter-spacing: -1px;
+  line-height: 13px;
+  letter-spacing: -0.7px;
 }
 
 .asterisk {
@@ -63,6 +62,7 @@ header h1 {
 }
 
 .main-nav li {
+  margin-right: -4px;
   display: inline-block;
   text-transform: uppercase;
   font-family: "Lato Bold", "Arial", sans-serif;
@@ -70,8 +70,14 @@ header h1 {
   line-height: 6px;
 }
 
+.main-nav li:first-child {
+  letter-spacing: 0px;
+}
+
 .main-nav li:not(:last-child)::after {
-  padding: 0px 11px;
+  padding: 3px 13px 10px 13px;
+  display: inline-block;
+  vertical-align: middle;
   content: ".";
   color: #494e62;
   font-size: 12px;
@@ -84,7 +90,7 @@ header h1 {
   height: 448px;
   padding: 80px 40px 65px 40px;
   background-color: #f06c64;
-  border-bottom: 7px solid #ea676b;
+  border-bottom: 7.5px solid #ea676b;
 }
 
 .slider .arrow {
@@ -120,7 +126,7 @@ header h1 {
 .phone-wrapper .phone {
   position: absolute;
   height: 458px;
-  width: 215px;
+  width: 214.7px;
   z-index: 5;
 }
 
@@ -155,8 +161,10 @@ header h1 {
 }
 
 .phone-wrapper.horizonal .phone {
-  top: -27px;
-  left: 507px;
+  top: -27.5px;
+  left: 506.3px;
+  height: 458.3px;
+  width: 215px;
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
@@ -165,9 +173,10 @@ header h1 {
 }
 
 .phone-wrapper.horizonal .shadow {
-  top: -27px;
-  left: 508px;
-  height: 482px;
+  top: -27.5px;
+  left: 506.4px;
+  height: 458.2px;
+  width: 215.3px;
   -webkit-transform: rotate(90deg) scaleX(-1);
   -moz-transform: rotate(90deg) scaleX(-1);
   -ms-transform: rotate(90deg) scaleX(-1);
@@ -187,7 +196,7 @@ header h1 {
 /* services */
 
 .services {
-  padding: 70px 40px 28px 40px;
+  padding: 70.3px 40px 28px 40px;
   background-color: #f2f2f2;
   border-bottom: 6px solid #ffffff;
 }
@@ -198,17 +207,18 @@ header h1 {
   line-height: 18px;
   color: #666d89;
   font-family: "Lato Black", "Arial", sans-serif;
-  letter-spacing: -1px;
 }
 
-.services p {
+.services article p {
   margin: 0;
-  padding: 27px 0px 45px 0px;
+  padding: 26px 0px 44.5px 0px;
   font-size: 18px;
   line-height: 30px;
   color: #767e9e;
   font-family: "Lato Light", "Arial", sans-serif;
+  letter-spacing: -0.25px;
   word-spacing: -2px;
+  text-align: justify;
 }
 
 .services-wrapper {
@@ -223,16 +233,17 @@ header h1 {
   font-size: 18px;
   line-height: 18px;
   color: #666d89;
-  letter-spacing: -1px;
+  word-spacing: -1px;
 }
 
 .service {
   overflow: hidden;
+  padding-right: 20px;
 }
 
 .service .logo {
   float: left;
-  margin-right: 18px;
+  margin-right: 19px;
   height: 61px;
   width: 61px;
 }
@@ -242,34 +253,55 @@ header h1 {
 }
 
 .service .description p {
+  margin: 0;
   padding: 10px 0px;
   font-family: "Lato", "Arial", sans-serif;
   font-size: 12px;
-  line-height: 22px;
+  line-height: 21.5px;
   color: #767e9e;
   word-spacing: 0px;
+  word-break: break-word;
+  text-align: justify;
 }
 
 .logo.pen {
-  background: url(assets/pen.svg) 0 0 no-repeat;
+  background: url(assets/icons/pen.svg) 1px 0 no-repeat;
+  background-size: 60px 60px;
 }
 
 .logo.phone {
-  background: url(assets/phone.svg) 0 0 no-repeat;
+  background: url(assets/icons/phone.svg) 1px 0 no-repeat;
+  background-size: 60px 60px;
 }
 
 .logo.bulb {
-  background: url(assets/bulb.svg) 0 0 no-repeat;
+  background: url(assets/icons/bulb.svg) 0 0 no-repeat;
+  background-size: 60px 59.4px;
 }
 
 .logo.bubble {
-  background: url(assets/bubble.svg) 0 0 no-repeat;
+  background: url(assets/icons/bubble.svg) 0 0 no-repeat;
+  background-size: 60px 59.4px;
 }
 
 .logo.heart {
-  background: url(assets/heart.svg) 0 0 no-repeat;
+  background: url(assets/icons/heart.svg) 0 0 no-repeat;
+  background-size: 60px 60px;
 }
 
 .logo.star {
-  background: url(assets/star.svg) 0 0 no-repeat;
+  background: url(assets/icons/star.svg) 0 0 no-repeat;
+  background-size: 60px 60px;
+}
+
+.margin-right-18 {
+  margin-right: 18px !important;
+}
+
+.word-spacing-0 {
+  word-spacing: 0px !important;
+}
+
+.service .bubble + .description h5{
+  word-spacing: -1.4px;
 }
