@@ -1,0 +1,93 @@
+html {
+  font-family: "Lato", "Arial", sans-serif;
+}
+
+h2 {
+  margin: 0;
+
+  font-family: "Lato Black", "Arial", sans-serif;
+  font-style: normal;
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 18px;
+  color: #666d89;
+}
+
+p {
+  margin: 0;
+
+  font-family: "Lato Light", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  color: #767e9e;
+  font-weight: 300;
+  text-align: justify;
+}
+
+.wrapper {
+  max-width: 1020px;
+}
+
+.layout-4-column {
+  display: grid;
+  grid-template-columns: repeat(4, 220px);
+  grid-gap: 16px 20px;
+}
+
+.portfolio {
+  background-color: #2d303a;
+}
+
+.portfolio__wrapper {
+  padding: 71px 40px 67px 40px;
+}
+
+.portfolio__title {
+  margin-bottom: 27px;
+  letter-spacing: 0.25px;
+}
+
+.portfolio__description {
+  word-spacing: -2px;
+  margin-bottom: 9px;
+}
+
+.portfolio__tags {
+  padding-left: 1px;
+}
+
+.portfolio__tags__tag_wd {
+  padding: 4px 6px 5px 7px !important;
+}
+
+.portfolio__tags__tag_gd {
+  padding: 4px 4px 5px 7px !important;
+}
+
+.portfolio__tags__tag_a {
+  padding: 4px 6px 5px 7px !important;
+}
+
+.tags > .tag {
+  padding: 4px 7px 5px 7px;
+  margin-right: 6px;
+
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #767e9e;
+
+  border: 0.5px solid #767e9e;
+  border-radius: 5px;
+}
+
+.tags > .tag.tag_selected {
+  color: #dedede;
+  border: 0.5px solid #c5c5c5;
+}
+
+.portfolio__projects {
+  padding: 20px 0;
+}
+
+
