@@ -170,8 +170,7 @@ ul {
 }
 
 .slider__arrow:hover {
-  width: 20px;
-  height: 31px;
+  background: url("assets/images/arrow_white.png") 0 0 no-repeat;
 }
 
 
