@@ -17,28 +17,40 @@
       <h1 class="header__title">Singolo<span class="header__title_asterisk">*</span></h1>
       <nav class="header__navigation">
         <ul class="navigation">
-          <li class="navigation__link navigation__link_active"><a href="#">Home</a></li>
-          <li class="navigation__link"><a href="#">Services</a></li>
-          <li class="navigation__link"><a href="#">Portfolio</a></li>
-          <li class="navigation__link"><a href="#">About</a></li>
-          <li class="navigation__link"><a href="#">Contact</a></li>
+          <li class="navigation__link navigation__link_active"><a href="#slider">Home</a></li>
+          <li class="navigation__link"><a href="#services">Services</a></li>
+          <li class="navigation__link"><a href="#portfolio">Portfolio</a></li>
+          <li class="navigation__link"><a href="#about-us">About</a></li>
+          <li class="navigation__link"><a href="#get-quote">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
-  <section class="slider">
+  <section id="slider" class="slider">
     <div class="wrapper slider__wrapper">
       <ul class="slider__items">
-        <li class="slider__item">
+        <li class="slider__item block-showed">
           <div class="phone-wrapper vertical">
             <img class="phone" src="assets/images/phone.png" alt="Phone vertical">
             <img class="shadow" src="assets/images/shadow.png" alt="Phone shadow">
-            <div class="screen"></div>
+            <div class="screen screen_active"></div>
           </div>
           <div class="phone-wrapper horizonal">
             <img class="phone" src="assets/images/phone.png" alt="Phone horizonal">
             <img class="shadow" src="assets/images/shadow.png" alt="Phone shadow">
-            <div class="screen"></div>
+            <div class="screen screen_active"></div>
+          </div>
+        </li>
+        <li class="slider__item">
+          <div class="phone-wrapper vertical">
+            <img class="phone" src="assets/images/phone.png" alt="Phone vertical">
+            <img class="shadow" src="assets/images/shadow.png" alt="Phone shadow">
+            <div class="screen screen_active"></div>
+          </div>
+          <div class="phone-wrapper horizonal">
+            <img class="phone" src="assets/images/phone.png" alt="Phone horizonal">
+            <img class="shadow" src="assets/images/shadow.png" alt="Phone shadow">
+            <div class="screen screen_active"></div>
           </div>
         </li>
       </ul>
@@ -46,7 +58,7 @@
       <div class="slider__arrow slider__arrow_next"></div>
     </div>
   </section>
-  <section class="services">
+  <section id="services" class="services">
     <div class="wrapper services__wrapper">
       <h3 class="services__title">Our Services</h3>
       <p class="services__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis,
@@ -105,7 +117,7 @@
       </ul>
     </div>
   </section>
-  <section class="portfolio">
+  <section id="portfolio" class="portfolio">
     <div class="wrapper portfolio__wrapper">
       <h2 class="portfolio__title">Portfolio</h2>
       <p class="portfolio__description">Duis mollis, est non commodo luctus, nisi eratv porttitor ligula, eget lacinia
@@ -156,7 +168,7 @@
       </div>
     </div>
   </section>
-  <section class="about-us">
+  <section id="about-us" class="about-us">
     <div class="wrapper about-us__wrapper">
       <h2 class="about-us__title">About Us</h2>
       <p class="about-us__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
@@ -209,7 +221,7 @@
       </div>
     </div>
   </section>
-  <section class="get-quote">
+  <section id="get-quote" class="get-quote">
     <div class="wrapper get-quote__wrapper">
       <h2 class="get-quote__title">Get a Quote</h2>
       <p class="get-quote__description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis,
@@ -217,11 +229,11 @@
         commodo, tortor mauris condimentum nibh.</p>
       <div class="layout-2-column get-quote__content">
         <div class="form get-quote__form">
-          <form action="/getQuote" method="POST">
+          <form action="/getQuote" method="POST" onsubmit="return false;">
             <div class="form__content">
               <input type="text" name="name" placeholder="Name (Required)" required>
-              <input type="text" name="email" placeholder="Email (Required)" required>
-              <input type="text" name="subject" placeholder="Subject" required>
+              <input type="email" name="email" placeholder="Email (Required)" required>
+              <input type="text" name="subject" placeholder="Subject">
               <textarea class="get-quote__message" name="message"
                 placeholder="Describe your project in detail..."></textarea>
             </div>
@@ -266,6 +278,18 @@
       </div>
     </div>
   </footer>
+
+  <div class="modal">
+    <div class="modal__content">
+      <div class="modal__body"></div>
+      <div class="modal__footer">
+        <button class="button button_ok">OK</button>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="script.js"></script>
 </body>
 
 </html>

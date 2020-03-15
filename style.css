@@ -70,6 +70,12 @@ ul {
 /* header */
 
 .header {
+  position: fixed;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  z-index: 100;
+
   background-color: #2d303a;
   border-bottom: 7px solid #323746;
 }
@@ -146,6 +152,8 @@ ul {
 /* slider */
 
 .slider {
+  padding-top: 90px;
+
   background-color: #f06c64;
   border-bottom: 8px solid #ea676b;
 }
@@ -184,6 +192,10 @@ ul {
   right: 40px;
 }
 
+.slider__item {
+  display: none;
+}
+
 /* phone */
 
 .phone-wrapper {
@@ -208,7 +220,9 @@ ul {
   z-index: 10;
 
   border: 3px solid #c7c8c7;
+  background: #000000;
 }
+
 
 .phone-wrapper.vertical .phone {
   top: -27px;
@@ -226,7 +240,9 @@ ul {
 
   width: 188px;
   height: 333px;
+}
 
+.phone-wrapper.vertical .screen.screen_active {
   background: url("assets/images/screen-vertical.png");
   background-position: -14px 445px;
 }
@@ -254,7 +270,9 @@ ul {
 
   width: 333px;
   height: 188px;
+}
 
+.phone-wrapper.horizonal .screen.screen_active {
   background: url("assets/images/screen-horizontal.png");
   background-position: -125px -119px;
 }
@@ -453,6 +471,10 @@ ul {
   width: 220px;
 }
 
+.image_selected {
+  border: 5px solid #F06C64;
+}
+
 /*about us section*/
 
 .about-us {
@@ -582,8 +604,20 @@ ul {
   text-align: right;
 }
 
-.form__buttons > .button {
+.button {
+  padding: 10px 6px 6px 14px;
+  width: 100px;
   cursor: pointer;
+
+  font-size: 12px;
+  line-height: 22px;
+  color: #ffffff;
+  font-family: "Lato", "Arial", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #d6564f;
 }
 
 .form.get-quote__form .form__content > input,
@@ -596,7 +630,7 @@ ul {
 
   font-size: 12px;
   line-height: 22px;
-  color: #f48c8f;
+  color: #ffffff;
   font-family: "Lato", "Arial", sans-serif;
   font-weight: 400;
   letter-spacing: 0.15px;
@@ -720,5 +754,40 @@ ul {
   display: grid;
   grid-template-columns: 618.5px 322px;
   grid-gap: 21px;
+}
+
+
+/* modal window */
+
+.modal {
+  display: none;
+  position: fixed;
+  padding-top: 200px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  z-index: 1000;
+
+  background-color: rgb(45, 48, 58, 0.4);
+}
+
+.modal_active {
+  display: block;
+}
+
+.modal__content {
+  margin: auto;
+  padding: 15px;
+  width: 50%;
+
+  background-color: #ffffff;
+}
+
+.modal__footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
