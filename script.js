@@ -97,6 +97,8 @@ let modalBody =  modalWindow.querySelector(".modal__body");
 function closeModalWindow() {
   modalBody.innerHTML = "";
   modalWindow.classList.remove("modal_active");
+
+  document.querySelector(".get-quote__form form").reset();
 }
 
 function showModalWindow(content) {
