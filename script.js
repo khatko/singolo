@@ -12,12 +12,24 @@ navLinks.forEach(link => link.addEventListener("click", navigateToSection));
 
 /* slider */
 
+let sliders = document.querySelectorAll(".slider__items > .slider__item");
+let activeSlide = 0;
+
+function changeActiveSlide(n) {
+  activeSlide = (n + sliders.length) % sliders.length;
+}
+
 function showPrevSlide() {
-  console.log("showPrevSlide");
+
+  sliders[activeSlide].classList.remove("block-showed");
+  changeActiveSlide(activeSlide - 1);
+  sliders[activeSlide].classList.add("block-showed");
 }
 
 function showNextSlide() {
-  console.log("showNextSlide");
+  sliders[activeSlide].classList.remove("block-showed");
+  changeActiveSlide(activeSlide + 1);
+  sliders[activeSlide].classList.add("block-showed");
 }
 
 document.querySelector(".slider__arrow_prev").addEventListener("click", showPrevSlide);

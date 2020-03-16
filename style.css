@@ -160,6 +160,7 @@ ul {
 
 .slider__wrapper {
   position: relative;
+
   height: 592px;
   padding: 80px 40px 65px 40px;
 }
@@ -194,6 +195,35 @@ ul {
 
 .slider__item {
   display: none;
+  position: relative;
+}
+
+.slider__item.disapper {
+  animation-name: disapper;
+  animation-duration: 1s;
+}
+
+@keyframes disapper {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.slider__item.appear {
+  animation-name: appear;
+  animation-duration: 1s;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
 }
 
 /* phone */
@@ -223,7 +253,6 @@ ul {
   background: #000000;
 }
 
-
 .phone-wrapper.vertical .phone {
   top: -27px;
   left: 72px;
@@ -245,6 +274,12 @@ ul {
 .phone-wrapper.vertical .screen.screen_active {
   background: url("assets/images/screen-vertical.png");
   background-position: -14px 445px;
+}
+
+.slider__item:nth-child(2) .phone-wrapper.vertical .screen.screen_active {
+  background: url("assets/images/phone2.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .phone-wrapper.horizonal .phone {
@@ -275,6 +310,12 @@ ul {
 .phone-wrapper.horizonal .screen.screen_active {
   background: url("assets/images/screen-horizontal.png");
   background-position: -125px -119px;
+}
+
+.slider__item:nth-child(2) .phone-wrapper.horizonal .screen.screen_active {
+  background: url("assets/images/phone3.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 /* services */
