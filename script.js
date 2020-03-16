@@ -12,28 +12,54 @@ navLinks.forEach(link => link.addEventListener("click", navigateToSection));
 
 /* slider */
 
-let sliders = document.querySelectorAll(".slider__items > .slider__item");
+let sliders = document.querySelectorAll(".slider__item");
 let activeSlide = 0;
+let isEnabled = true;
 
-function changeActiveSlide(n) {
+function changeCurrentSlide(n) {
   activeSlide = (n + sliders.length) % sliders.length;
 }
 
-function showPrevSlide() {
-
-  sliders[activeSlide].classList.remove("block-showed");
-  changeActiveSlide(activeSlide - 1);
-  sliders[activeSlide].classList.add("block-showed");
+function hideSlide(direction) {
+  isEnabled = false;
+	sliders[activeSlide].classList.add(direction);
+	sliders[activeSlide].addEventListener('animationend', function() {
+		this.classList.remove("block-showed", direction);
+	});
 }
 
-function showNextSlide() {
-  sliders[activeSlide].classList.remove("block-showed");
-  changeActiveSlide(activeSlide + 1);
-  sliders[activeSlide].classList.add("block-showed");
+function showSlide(direction) {
+  sliders[activeSlide].classList.add('next', direction);
+	sliders[activeSlide].addEventListener('animationend', function() {
+		this.classList.remove('next', direction);
+		this.classList.add('block-showed');
+		isEnabled = true;
+	});
 }
 
-document.querySelector(".slider__arrow_prev").addEventListener("click", showPrevSlide);
-document.querySelector(".slider__arrow_next").addEventListener("click", showNextSlide);
+function showPrevSlide(n) {
+  hideSlide('to-left');
+	changeCurrentSlide(n + 1);
+	showSlide('from-right');
+}
+
+function showNextSlide(n) {
+  hideSlide('to-right');
+	changeCurrentSlide(n - 1);
+	showSlide('from-left');
+}
+
+document.querySelectorAll(".slider__arrow_prev").forEach(el => el.addEventListener("click", function() {
+  if (isEnabled) {
+		showPrevSlide(activeSlide);
+	}
+}));
+
+document.querySelectorAll(".slider__arrow_next").forEach(el => el.addEventListener("click", function() {
+  if (isEnabled) {
+		showNextSlide(activeSlide);
+	}
+}));
 
 /* screen */
 
